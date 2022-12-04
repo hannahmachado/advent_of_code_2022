@@ -8,4 +8,6 @@ with open("solutions/dec_01/input.tsv")as f:
         else:
             total_calories.append(sum)
             sum = 0
-    print(max(total_calories))
+
+    top_3_sum = sum(sorted(total_calories, reverse=True)[0:3])
+    print(top_3_sum)
